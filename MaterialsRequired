@@ -1,0 +1,16 @@
+package cleancode;
+
+public class MaterialsRequired {
+           public double Standard_materials(double feet){
+        	   return feet*1200;
+           }
+           public double Above_std_materials(double feet){
+        	   return feet*1500;
+           }
+           public double High_std_materials(double feet){
+        	   return feet*1800;
+           }
+           public double High_Auto_std_materials(double feet){
+        	   return feet*2500;
+           }
+}
