@@ -1,0 +1,31 @@
+package cleancode;
+
+import java.util.Scanner;
+
+public class HouseConstruction {
+           public static void main(String args[]){
+        	   Scanner sc=new Scanner(System.in);
+        	   System.out.println("The required area of the house : ");
+        	   double feet = sc.nextInt();
+        	   System.out.println("Enter 1 to have a house with Standard Materials");
+        	   System.out.println("Enter 2 to have a house with Above Standard Materials");
+        	   System.out.println("Enter 3 to have a house with High Standard Materials");
+        	   System.out.println("Enter 4 to have a house with High Standard Materials and with Automated features");
+        	   int ch=sc.nextInt();
+        	   materials_required ob=new materials_required();
+        	   double res;
+        	   switch(ch){
+        	   case 1:res=ob.Standard_materials(feet);
+        	          break;
+        	   case 2:res=ob.Above_std_materials(feet);
+        	          break;
+        	   case 3:res=ob.High_std_materials(feet);
+        	          break;
+        	   case 4:res=ob.High_Auto_std_materials(feet);
+        	          break;
+        	   default:System.out.print("Please Enter valid option");
+        	           return;
+        	   }
+        	   System.out.println("Total cost used for construction of house : " + res);
+           }
+}
